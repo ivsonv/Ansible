@@ -9,3 +9,6 @@ Using Ansible lets you automate virtually any task
 * Perform zero-downtime rolling updates
 
 * [Docs Ansible](https://docs.ansible.com/ansible/10/getting_started/index.html)
+
+### Start Local
+![Captura de Tela 2024-07-03 às 20 35 58](https://github.com/ivsonv/Ansible/assets/63156114/7d5a7c61-6853-47af-9d51-fc2975904b03)
