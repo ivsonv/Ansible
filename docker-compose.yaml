@@ -1,0 +1,9 @@
+name: app-ansible
+services: 
+  control:
+    build: .
+    container_name: control
+    command: ["tail", "-f", "/dev/null"]
+    hostname: control
+    volumes: 
+      - .:/root/ansible
