@@ -7,3 +7,9 @@ services:
     hostname: control
     volumes: 
       - .:/root/ansible
+
+  node_ansible:
+    build: .
+    container_name: node_ansible
+    command: ["tail", "-f", "/dev/null"]
+    hostname: node_ansible
