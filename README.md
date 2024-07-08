@@ -14,3 +14,29 @@ Using Ansible lets you automate virtually any task
 
 * inventory -> hosts -> `localhost ansible_connection=local`
 ![Captura de Tela 2024-07-03 às 20 35 58](https://github.com/ivsonv/Ansible/assets/63156114/7d5a7c61-6853-47af-9d51-fc2975904b03)
+
+### Exec commands
+* When starting the nodes, you must enable ssh on the node
+```sh
+service ssh start
+```
+
+* Install package `git` in nodes
+```sh
+ansible -i hosts all -m apt -a "update_cache=yes name=git state=present"
+```
+
+* Remove package `git` in nodes
+```sh
+ansible -i hosts all -m apt -a "update_cache=yes name=git state=absent"
+```
+
+* checkout in repository
+```sh
+ansible -i hosts all -m git -a "repo=https://github.com/ivsonv/provision-terraform-iac dest=/root/terraform-repo"
+```
+
+* full informations the node
+```sh
+ansible -i hosts node_ansible -m setup
+```
