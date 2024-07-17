@@ -1,0 +1,16 @@
+---
+- hosts: all
+  remote_user: ec2-user
+  become: true  ## After logging in you must become root
+
+  tasks:
+    - name: Install nginx
+      apt:
+        name: nginx
+        state: present   ## present or absent (install ou remove)
+
+    - name: Starting nginx
+      service:
+        name: nginx
+        state: started
+        enabled: true
